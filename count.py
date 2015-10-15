@@ -53,7 +53,7 @@ mapNames = {
 }
 
 nameRegex = r"(\d+)\_\d+\_(.*)\_(\d+\_\D+)\.wotreplay"
-files = [name for name in os.listdir('.') if os.path.isfile(name) and name.endswith('.wotreplay')]
+files = [name for name in os.listdir('.') if os.path.isfile(name) and not name.startswith('temp') and name.endswith('.wotreplay')]
 maps = []
 print "%-35s %s" % ("Number of replays processed:\t", len(files))
 print "\n"
