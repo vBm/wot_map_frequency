@@ -1,12 +1,9 @@
 #!/usr/bin/python
 
-__module_name__ = "wot_map_frequency_counter"
-__module_version__ = "0.2"
-__module_description__ = "Basic Python script that counts map frequency based on replays"
-
 import os
 import os.path
 import re
+from helpers import *
 
 # Populated list from:
 # https://api.worldoftanks.eu/wot/encyclopedia/arenas/?application_id=demo&fields=name_i18n
