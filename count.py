@@ -61,15 +61,15 @@ mapNames = {
 files = [name for name in os.listdir('.') if os.path.isfile(name) and not name.startswith('temp') and name.endswith('.wotreplay')]
 
 if len(files) > 0:
-	print "%-35s %s" % ("Number of replays processed:\t", len(files))
-	print "\n"
-	nameRegex = r"(\d+)\_\d+\_(.*)\_(\d+\_\D+)\.wotreplay"
-	maps = []
-	for replays in files:
-		replay = re.match(nameRegex, replays).groups()
-		maps.append(replay[2])
+    print "%-35s %s" % ("Number of replays processed:\t", len(files))
+    print "\n"
+    nameRegex = r"(\d+)\_\d+\_(.*)\_(\d+\_\D+)\.wotreplay"
+    maps = []
+    for replays in files:
+        replay = re.match(nameRegex, replays).groups()
+        maps.append(replay[2])
 
-	for count, mapName in sorted(((maps.count(e), e) for e in set(maps)), reverse=True):
-		print "%-35s %5s" % (mapNames.get(mapName), count)
+    for count, mapName in sorted(((maps.count(e), e) for e in set(maps)), reverse=True):
+        print "%-35s %5s" % (mapNames.get(mapName), count)
 else:
-	print "There are no replays available for processing...\nAre you sure that you have enabled replay recording?"
+    print "There are no replays available for processing...\nAre you sure that you have enabled replay recording?"
