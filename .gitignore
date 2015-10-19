@@ -49,3 +49,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# WoT replays
+*.wotreplay
