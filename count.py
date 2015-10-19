@@ -3,10 +3,24 @@
 import os
 import os.path
 import re
+import sys
 import json
 from helpers import *
 
-with open('./helpers/maps.json') as data_file:
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+# got resource_path from http://stackoverflow.com/a/13790741
+
+with open(resource_path('helpers/maps.json'), 'rb') as data_file:
     mapNames = json.load(data_file)
 
 files = [name for name in os.listdir('.') if os.path.isfile(name) and not

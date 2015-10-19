@@ -2,11 +2,14 @@
 
 block_cipher = None
 
+added_files = [
+     ( 'helpers/maps.json', 'helpers' )
+     ]
 
 a = Analysis(['count.py'],
              pathex=['.'],
              binaries=None,
-             datas=None,
+             datas=added_files,
              hiddenimports=[],
              hookspath=None,
              runtime_hooks=None,
