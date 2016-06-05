@@ -20,7 +20,7 @@ def resource_path(relative_path):
 
 # got resource_path from http://stackoverflow.com/a/13790741
 
-with open(resource_path('helpers/maps.json'), 'rb') as data_file:
+with open(resource_path('helpers/wot-maps.json'), 'rb') as data_file:
     mapNames = json.load(data_file)
 
 files = [name for name in os.listdir('.') if os.path.isfile(name) and not

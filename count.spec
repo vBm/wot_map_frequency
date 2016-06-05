@@ -3,7 +3,7 @@
 block_cipher = None
 
 added_files = [
-     ( 'helpers/maps.json', 'helpers' )
+     ( 'helpers/wot-maps.json', 'helpers' )
      ]
 
 a = Analysis(['count.py'],
