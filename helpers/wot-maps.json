@@ -1,7 +1,7 @@
 {
     "_comment": "Populated list from:",
     "_url": "https://api.worldoftanks.eu/wot/encyclopedia/arenas/?application_id=demo&fields=name_i18n",
-    "_count": 43,
+    "_count": 41,
     "maps": {
         "00_tank_tutorial": "Training area",
         "01_karelia": "Karelia",
@@ -37,14 +37,12 @@
         "83_kharkiv": "Kharkov",
         "84_winter": "Windstorm",
         "86_himmelsdorf_winter": "Winter Himmelsdorf",
-        "92_stalingrad": "Stalingrad",
         "95_lost_city": "Ghost Town",
         "96_prohorovka_defense": "Fiery Salient",
         "100_thepit": "Mittengard",
-        "101_dday": "Overlord",
         "103_ruinberg_winter": "Winterberg",
         "105_germany": "Berlin",
         "111_paris": "Icebound",
-        "114_czech": "114_czech/name"
+        "114_czech": "Pilsen"
     }
 }
