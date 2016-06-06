@@ -2,6 +2,7 @@
     "_comment": "Populated list from:",
     "_url": "https://api.worldoftanks.eu/wot/encyclopedia/arenas/?application_id=demo&fields=name_i18n",
     "_count": 41,
+    "_patch": "9.15",
     "maps": {
         "00_tank_tutorial": "Training area",
         "01_karelia": "Karelia",

@@ -21,7 +21,7 @@ def resource_path(relative_path):
 # got resource_path from http://stackoverflow.com/a/13790741
 
 with open(resource_path('helpers/wot-maps.json'), 'rb') as data_file:
-    mapNames = json.load(data_file)
+    jsonData = json.load(data_file)
 
 files = [name for name in os.listdir('.') if os.path.isfile(name) and not
          name.startswith('temp') and name.endswith('.wotreplay')]
@@ -37,7 +37,11 @@ if len(files) > 0:
 
     for count, mapName in sorted(((maps.count(e), e) for e in set(maps)),
                                  reverse=True):
-        print "%-35s %5s" % (mapNames["maps"][mapName], count)
+        try:
+            print "%-35s %5s" % (jsonData["maps"][mapName], count)
+        except:
+            print "\nThese maps are not present in %s patch\n" % jsonData["_patch"]
+            print "%-35s %5s" % (mapName, count)
 else:
     print "There are no replays available for processing...\n" \
           "Are you sure that you have enabled replay recording?"
